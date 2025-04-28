@@ -1,0 +1,147 @@
+
+:root {
+    --bg-dark: #0b1120; 
+    --bg-darker: rgba(11, 17, 32, 0.8); 
+    --text-light: #dbeafe; 
+    --text-muted: #94a3b8; 
+    --primary-blue: #3b82f6;
+    --primary-blue-hover: #2563eb;
+    --accent-blue: #38bdf8;
+    --danger-red: #ef4444;
+    --danger-red-hover: #dc2626;
+    --success-green: #22c55e;
+    --success-green-hover: #16a34a;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+
+table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(
+        to bottom right, 
+        rgba(13, 25, 48, 0.7), 
+        rgba(20, 40, 70, 0.7)
+    );
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 50, 0.6);
+    color: var(--text-light);
+    overflow: hidden;
+}
+
+
+th {
+    background-color: var(--primary-blue);
+    color: #f0f9ff;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+
+tr:hover td {
+    background: rgba(56, 189, 248, 0.1);
+}
+
+
+td[colspan] {
+    text-align: center;
+    color: var(--text-muted);
+    font-style: italic;
+    padding: 2rem;
+}
+
+
+td:last-child {
+    white-space: nowrap;
+}
+
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 80px;
+    box-shadow: 0 4px 12px rgba(0, 0, 70, 0.4);
+    margin-right: 0.5rem;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 70, 0.6);
+}
+
+
+.delete-btn {
+    background-color: var(--danger-red);
+    color: #f0f9ff;
+}
+
+.delete-btn:hover {
+    background-color: var(--danger-red-hover);
+}
+
+
+.edit-btn {
+    background-color: var(--success-green);
+    color: #f0f9ff;
+}
+
+.edit-btn:hover {
+    background-color: var(--success-green-hover);
+}
+
+
+.inline-form {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+
+@media (max-width: 768px) {
+    table {
+        margin: 1rem;
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
+    }
+
+    button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    td:last-child {
+        display: flex;
+        flex-direction: column;
+        white-space: normal;
+    }
+}
