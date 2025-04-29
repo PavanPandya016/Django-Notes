@@ -7,7 +7,7 @@ class myapp_form(forms.ModelForm):
     class Meta:
         model = myapp_db
         fields = ['topics', 'notes', 'date', 'time']
-        widgets = {
+            widgets = {
             'notes': forms.Textarea(attrs={'rows': 4, 'cols': 40}),
             'date': forms.DateInput(attrs={'type': 'date'}),
             'time': forms.TimeInput(attrs={'type': 'time'}),
